@@ -1,0 +1,88 @@
+<!DOCtype>
+<html>
+    <head>
+        <title>Trivia Game</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src = "javascript/app.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+        <h1>Trivia Game</h1>
+
+        <div id = "answers">
+                <p>Correct:
+                        <span id = "correct"></span>
+                    </p>
+                    <p>Incorrect:
+                        <span id = "incorrect"></span>
+                    </p>
+                    <p>Unanswered:
+                        <span id = "unanswered"></span>
+                    </p>
+                
+                    <button id = "tryAgain" class = "button">Try Again!</button>
+        </div>
+
+
+        <div id = "totalTime">
+        
+        <h2>You have <span id="seconds"></span> seconds remaining!</h2>
+        <form id = "quiz" name = "quiz">
+            <br>
+            <br>
+            <p>In what country can you see the Cliffs of Moher?</p>
+            <input type = "radio" id ="multiplechoice" name = "question1" value = "Scotland" class = "inline"> Scotland
+            <input type = "radio" id ="multiplechoice" name = "question1" value = "Ireland" class = "inline"> Ireland
+            <input type = "radio" id ="multiplechoice" name = "question1" value = "England" class = "inline"> England 
+            <input type = "radio" id ="multiplechoice" name = "question1" value = "Iceland" class = "inline"> Iceland 
+            <p>        
+            <p>Where could you visit Machu Picchu?</p>
+            <input type = "radio" id ="multiplechoice" name = "question2" value = "Columbia" class = "inline"> Columbia
+            <input type = "radio" id ="multiplechoice" name = "question2" value = "Argentina" class = "inline"> Argentina 
+            <input type = "radio" id ="multiplechoice" name = "question2" value = "Chile" class = "inline"> Chile 
+            <input type = "radio" id ="multiplechoice" name = "question2" value = "Peru" class = "inline"> Peru  
+            <p>        
+            <p>Where is the Great Barrier Reef?</p>
+            <input type = "radio" id ="multiplechoice" name = "question3" value = "Australia" class = "inline"> Australia
+            <input type = "radio" id ="multiplechoice" name = "question3" value = "New Zealand" class = "inline"> New Zealand 
+            <input type = "radio" id ="multiplechoice" name = "question3" value = "Fiji" class = "inline"> Fiji 
+            <input type = "radio" id ="multiplechoice" name = "question3" value = "Indonesia" class = "inline"> Indonesia
+            <p>        
+            <p>Where could you find a sand waterfall?</p>
+            <input type = "radio" id ="multiplechoice" name = "question4" value = "Cancun" class = "inline"> Cancun
+            <input type = "radio" id ="multiplechoice" name = "question4" value = "Playa Del Carmen" class = "inline"> Playa Del Carmen 
+            <input type = "radio" id ="multiplechoice" name = "question4" value = "Cabo" class = "inline"> Cabo 
+            <input type = "radio" id ="multiplechoice" name = "question4" value = "Mazatlan" class = "inline"> Mazatlan  
+            <p>        
+            <p>When does Oktoberfest begin in Munich?</p>
+            <input type = "radio" id ="multiplechoice" name = "question5" value = "August" class = "inline"> August
+            <input type = "radio" id ="multiplechoice" name = "question5" value = "September" class = "inline"> September
+            <input type = "radio" id ="multiplechoice" name = "question5" value = "October" class = "inline"> October
+            <input type = "radio" id ="multiplechoice" name = "question5" value = "November" class = "inline"> November  
+            <p>
+            <p>Approximately how many islands does Fiji have?</p>
+            <input type = "radio" id ="multiplechoice" name = "question6" value = "210" class = "inline"> 210
+            <input type = "radio" id ="multiplechoice" name = "question6" value = "120" class = "inline"> 120 
+            <input type = "radio" id ="multiplechoice" name = "question6" value = "330" class = "inline"> 330 
+            <input type = "radio" id ="multiplechoice" name = "question6" value = "190" class = "inline"> 190  
+            <p>         
+            <p>Where is the largest cave in the world?</p>
+            <input type = "radio" id ="multiplechoice" name = "question7" value = "Thailand" class = "inline"> Thailand
+            <input type = "radio" id ="multiplechoice" name = "question7" value = "Laos" class = "inline"> Laos 
+            <input type = "radio" id ="multiplechoice" name = "question7" value = "Cambodia" class = "inline"> Cambodia
+            <input type = "radio" id ="multiplechoice" name = "question7" value = "Vietnam" class = "inline"> Vietnam  
+            <p>
+        </form>
+        <br>
+        <button id = "done" class = "button">Done</button>
+        </div>
+        
+    
+
+    </body>
+</html>
