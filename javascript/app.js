@@ -13,10 +13,13 @@ $(document).ready(function () {
     var question5 = document.getElementsByName("September").value;
     var question6 = document.getElementsByName("330").value;
     var question7 = document.getElementsByName("Vietnam").value;
+    var question8 = document.getElementsByName("Venezuela").value;
+    var question9 = document.getElementsByName("Switzerland").value;
+    var question10 = document.getElementsByName("Ecuador").value;
     var startTime = 31;
     var gameFinished = false;
     var timer;
-    console.log(question1, question2, question3, question4, question5, question6, question7);
+    console.log(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10);
     
     $("#tryAgain").on("click", function() {
         $("#totalTime").show()
@@ -154,6 +157,40 @@ function stop() {
             incorrect++
         }
         console.log(input7);
+
+
+        var input8 = $("input[name='question8']:checked").val()
+        if(input8 === "Venezuela") {
+            correct++
+        }else if(!input8) {
+            unanswered++
+        }else {
+            incorrect++
+        }
+        console.log(input8);
+
+
+        var input9 = $("input[name='question9']:checked").val()
+        if(input9 === "Switzerland") {
+            correct++
+        }else if(!input9) {
+            unanswered++
+        }else {
+            incorrect++
+        }
+        console.log(input9);
+
+
+        var input10 = $("input[name='question10']:checked").val()
+        if(input10 === "Ecuador") {
+            correct++
+        }else if(!input10) {
+            unanswered++
+        }else {
+            incorrect++
+        }
+        console.log(input10);
+
                 console.log('Correct: ', correct)
                 console.log('Incorrect: ', incorrect)
             }
