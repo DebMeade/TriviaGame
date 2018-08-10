@@ -14,7 +14,9 @@ $(document).ready(function () {
     var question6 = document.getElementsByName("330").value;
     var question7 = document.getElementsByName("Vietnam").value;
     var startTime = 30;
-    console.log(question1, question2, question3, question4);
+    var gameFinished = false;
+    var timer;
+    console.log(question1, question2, question3, question4, question5, question6, question7);
     
     $("#tryAgain").on("click", function() {
         $("#totalTime").show()
@@ -24,13 +26,14 @@ $(document).ready(function () {
         incorrect = 0;
         unanswered = 0;
         startTime = 30;
+        decrement();
 
     })
 
 
     $("#done").on("click", function() {
         hideQuiz();
-        stop();
+        gameFinished = true;
     })
 
 
@@ -38,7 +41,6 @@ $(document).ready(function () {
         $("#totalTime").hide()
         $("#answers").show()
         collectAnswers ();
-        decrement.stop();
     }
 
     function collectAnswers () {
@@ -48,11 +50,8 @@ $(document).ready(function () {
         $("#correct").text(correct);
         $("#incorrect").text(incorrect);
         $("#unanswered").text(unanswered);
-        // var keys = answers.map(function(answer) { return answer.value })
-        // console.log(keys)
-        // var answerData = {
-        //     // question1: answers.
-        // }
+        stop();
+
     }
 
     decrement();
@@ -63,65 +62,101 @@ $(document).ready(function () {
         console.log(startTime);
         $("#seconds").text(startTime);
 
-        if (startTime < 1) {
+        if (startTime < 1 && !gameFinished) {
             hideQuiz();
             console.log("time's up")
         } else {
-            setTimeout(decrement, 1000)
+            timer = setTimeout(decrement, 1000)
         }
         
     }
 
 function stop() {
-    clearInterval(startTime);
+    clearTimeout(timer);
 }
 
     function check(answers) {
 
-        if (answers[0].name === "question1" && answers[0].value === "Ireland") {
-            correct++
-        } else {
-            incorrect++
-        }
+        var input1 = $("input[name='question1']:checked").val()
+            if(input1 === "Ireland") {
+                correct++
+            }else if(!input1) {
+                unanswered++
+            }else {
+                incorrect++
+            }
+        console.log(input1);
 
-        if (answers[1].name === "question2" && answers[1].value === "Peru") {
-            correct++
-        } else {
-            incorrect++
-        }
 
-        if (answers[2].name === "question3" && answers[2].value === "Australia") {
-            correct++
-        } else {
-            incorrect++
-        }
+        var input2 = $("input[name='question2']:checked").val()
+            if(input2 === "Peru") {
+                correct++
+            }else if(!input2) {
+                unanswered++
+            }else {
+                incorrect++
+            }
+        console.log(input2);
 
-        if (answers[3].name === "question4" && answers[3].value === "Cabo") {
-            correct++
-        } else {
-            incorrect++
-        }
 
-        if (answers[4].name === "question4" && answers[4].value === "September") {
+        var input3 = $("input[name='question3']:checked").val()
+        if(input3 === "Australia") {
             correct++
-        } else {
+        }else if(!input3) {
+            unanswered++
+        }else {
             incorrect++
         }
+        console.log(input3);
 
-        if (answers[5].name === "question4" && answers[5].value === "330") {
-            correct++
-        } else {
-            incorrect++
-        }
 
-        if (answers[6].name === "question4" && answers[6].value === "Vietnam") {
+        var input4 = $("input[name='question4']:checked").val()
+        if(input4 === "Cabo") {
             correct++
-        } else {
+        }else if(!input4) {
+            unanswered++
+        }else {
             incorrect++
         }
-        console.log('Correct: ', correct)
-        console.log('Incorrect: ', incorrect)
-    }
+        console.log(input4);
+
+
+
+        var input5 = $("input[name='question5']:checked").val()
+        if(input5 === "September") {
+            correct++
+        }else if(!input5) {
+            unanswered++
+        }else {
+            incorrect++
+        }
+        console.log(input5);
+
+
+
+        var input6 = $("input[name='question6']:checked").val()
+        if(input6 === "330") {
+            correct++
+        }else if(!input6) {
+            unanswered++
+        }else {
+            incorrect++
+        }
+        console.log(input6);
+
+
+        var input7 = $("input[name='question7']:checked").val()
+        if(input7 === "Vietnam") {
+            correct++
+        }else if(!input7) {
+            unanswered++
+        }else {
+            incorrect++
+        }
+        console.log(input7);
+                console.log('Correct: ', correct)
+                console.log('Incorrect: ', incorrect)
+            }
 
 
 
