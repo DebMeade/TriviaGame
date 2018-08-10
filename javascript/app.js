@@ -13,7 +13,7 @@ $(document).ready(function () {
     var question5 = document.getElementsByName("September").value;
     var question6 = document.getElementsByName("330").value;
     var question7 = document.getElementsByName("Vietnam").value;
-    var startTime = 30;
+    var startTime = 31;
     var gameFinished = false;
     var timer;
     console.log(question1, question2, question3, question4, question5, question6, question7);
