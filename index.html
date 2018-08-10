@@ -4,7 +4,7 @@
         <title>Trivia Game</title>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src = "javascript/app.js"></script>
+        
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
@@ -33,8 +33,7 @@
         
         <h2>You have <span id="seconds"></span> seconds remaining!</h2>
         <form id = "quiz" name = "quiz">
-            <br>
-            <br>
+            <hr>
             <p>In what country can you see the Cliffs of Moher?</p>
             <input type = "radio" id ="multiplechoice" name = "question1" value = "Scotland" class = "inline"> Scotland
             <input type = "radio" id ="multiplechoice" name = "question1" value = "Ireland" class = "inline"> Ireland
@@ -77,12 +76,30 @@
             <input type = "radio" id ="multiplechoice" name = "question7" value = "Cambodia" class = "inline"> Cambodia
             <input type = "radio" id ="multiplechoice" name = "question7" value = "Vietnam" class = "inline"> Vietnam  
             <p>
+            <p>Where is the world's highest waterfall?</p>
+            <input type = "radio" id ="multiplechoice" name = "question8" value = "Venezuela" class = "inline"> Venezuela
+            <input type = "radio" id ="multiplechoice" name = "question8" value = "South Africa" class = "inline"> South Africa 
+            <input type = "radio" id ="multiplechoice" name = "question8" value = "Peru" class = "inline"> Peru
+            <input type = "radio" id ="multiplechoice" name = "question8" value = "United States" class = "inline"> United States  
+            <p>
+            <p>Where is the world's longest tunnel?</p>
+            <input type = "radio" id ="multiplechoice" name = "question9" value = "Unite States" class = "inline"> United States
+            <input type = "radio" id ="multiplechoice" name = "question9" value = "Switzerland" class = "inline"> Switzerland 
+            <input type = "radio" id ="multiplechoice" name = "question9" value = "China" class = "inline"> China
+            <input type = "radio" id ="multiplechoice" name = "question9" value = "Sweden" class = "inline"> Sweden  
+            <p>
+            <p>Where is the largest cave in the world?</p>
+            <input type = "radio" id ="multiplechoice" name = "question10" value = "Malaysia" class = "inline"> Malaysia
+            <input type = "radio" id ="multiplechoice" name = "question10" value = "India" class = "inline"> India 
+            <input type = "radio" id ="multiplechoice" name = "question10" value = "Tanzania" class = "inline"> Tanzania
+            <input type = "radio" id ="multiplechoice" name = "question10" value = "Ecuador" class = "inline"> Ecuador  
+            <p>
         </form>
         <br>
         <button id = "done" class = "button">Done</button>
         </div>
         
-    
+        <script src = "javascript/app.js"></script>    
 
     </body>
 </html>
