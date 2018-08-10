@@ -10,5 +10,3 @@ Once the user opens the link they will have 30 seconds to answer all of the ques
 This game is built using html, css, javascript and jqery.  
 
 The timer starts and stops using setTimeout and clearTimeout.
-
-Rather than using different tabs or windows to populate information sections were either hidden or shown depending upon where the user is in the game.
